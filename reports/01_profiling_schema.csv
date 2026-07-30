@@ -1,0 +1,21 @@
+﻿Column,Data Type,Non-Null,Missing,Missing (%),Unique,Example Value
+TransactionID,int64,20000,0,0.0,20000,1
+CustomerID,int64,20000,0,0.0,8025,8270
+TransactionDate,datetime64[us],20000,0,0.0,871,2025-01-29 00:00:00
+TransactionType,str,20000,0,0.0,6,Card Payment
+Amount,float64,20000,0,0.0,19967,6980.185223290763
+ProductCategory,str,20000,0,0.0,5,Checking Account
+ProductSubcategory,str,20000,0,0.0,5,Gold
+BranchCity,str,20000,0,0.0,8,Seville
+BranchLat,float64,20000,0,0.0,8,37.3891
+BranchLong,float64,20000,0,0.0,8,-5.9845
+Channel,str,20000,0,0.0,4,Branch
+Currency,str,20000,0,0.0,2,EUR
+CreditCardFees,float64,20000,0,0.0,2801,0.0
+InsuranceFees,float64,20000,0,0.0,3278,0.0
+LatePaymentAmount,float64,20000,0,0.0,3120,0.0
+CustomerScore,int64,20000,0,0.0,550,839
+MonthlyIncome,float64,20000,0,0.0,19792,5767.68
+CustomerSegment,str,20000,0,0.0,3,Middle Income Segment
+RecommendedOffer,str,20000,0,0.0,7,Mid-tier Savings Booster
+_total_fees,float64,20000,0,0.0,7198,0.0
