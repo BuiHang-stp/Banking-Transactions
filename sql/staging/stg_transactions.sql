@@ -28,6 +28,4 @@ SELECT
     TRIM(customer_segment) AS customer_segment, 
     TRIM(recommended_offer) AS recommended_offer
 FROM raw.transactions;
-
 CREATE UNIQUE INDEX ON staging.stg_transactions(transaction_id);
-CREATE INDEX ON staging.stg_transactions(customer_id);
