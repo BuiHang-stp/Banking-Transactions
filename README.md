@@ -111,7 +111,7 @@ Which dimension each question needs. This drove the star schema design — the m
 | 8 | Disproportionate fee burden | ✓ | | | | | ✓ |
 | 9 | Friction points driving revenue | ✓ | | | ✓ | | |
 | 10 | Seasonality | | ✓ | | | | |
-| 11 | Offer vs behaviour fit | ✓ | | | | | ✓ |
+| 11 | Offer vs behavior fit | ✓ | | | | | ✓ |
 | 12 | Emerging trends | ✓ | ✓ | | ✓ | | |
 
 ## 4. Architecture             
@@ -150,13 +150,16 @@ erDiagram
 ## 5. Key Findings        
 ## 6. Recommendations          
 ## 7. Limitations            
-- Synthetic / simulated dataset — figures illustrate methodology, not any real institution's performance.
+- Synthetic / simulated dataset — Dataset provided by Xóm Data for educational purposes.
 - `RecommendedOffer` is deterministically derived from income segment, which caps what Q11 can conclude.
 - No time-series depth per customer beyond the observed window, so churn and lifetime-value questions are out of scope.
 - Single market (Spain); findings do not generalise across regulatory environments.
 
 ---
+## 💬 Let's talk
+Thank you for reading this far!   
+I'm always open to Data Analyst opportunities, as well as any feedback that 
+helps me improve. Feel free to reach out. 
 
-## Author
 **Bùi Thu Hằng** — Data Analyst           
-Reach me on [LinkedIn](https://www.linkedin.com/in/buithuhang/) or via [Email](mailto:hangbui.bda@gmail.com)
+📧 [Email](mailto:hangbui.bda@gmail.com) · 💼 [LinkedIn](https://www.linkedin.com/in/buithuhang/)
