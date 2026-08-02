@@ -1,5 +1,4 @@
-# Banking Transaction Analytics
-
+# Banking Transaction Analytics             
 Analytics pipeline over 20,000 Spanish retail-banking transactions: Python profiling → PostgreSQL (raw → staging → star schema, marts) → SQL analysis → Power BI. Answers 12 business questions on customer segmentation, transaction behaviour, fee revenue and seasonality.
 
 <p align="left">
@@ -9,8 +8,7 @@ Analytics pipeline over 20,000 Spanish retail-banking transactions: Python profi
   <img src="https://img.shields.io/badge/Power_BI-Desktop-F2C811?logo=powerbi&logoColor=black" />
 </p>
 
-## Dashboard
-
+## Dashboard    
 <!--
 <table>
   <tr>
@@ -39,12 +37,10 @@ Analytics pipeline over 20,000 Spanish retail-banking transactions: Python profi
 </table>
 -->
 
-## 1. Business Context
-
+## 1. Business Context              
 A retail bank holds transaction-level data across checking accounts, loans, mortgages and card payments, enriched with customer income band, credit score, branch location, channel and the marketing offer assigned to each customer.
 
-The bank wants to use this data to:
-
+The bank wants to use this data to:      
 - **Personalise** product recommendations to how customers actually behave
 - **Assess** customer-level risk and profitability
 - **Refine** marketing campaigns to the segments that respond
@@ -63,8 +59,7 @@ The bank wants to use this data to:
 | Time span | ~871 distinct dates |
 
 ## 2. Business Questions
-
-Twelve questions in four groups. Each group maps to one SQL file and one dashboard section.
+Twelve questions in four groups. Each group maps to one SQL file and one dashboard section.            
 
 ### Group 1. Customer Segmentation
 
@@ -90,7 +85,7 @@ Twelve questions in four groups. Each group maps to one SQL file and one dashboa
 | 8 | Are any customer groups bearing a disproportionate share of fees? |
 | 9 | Which friction points recur most often while still generating revenue? |
 
-### Group 4. Trends & Performance
+### Group 4. Trends & Performance         
 
 | No. | Question |
 |:---:|---|
@@ -98,9 +93,9 @@ Twelve questions in four groups. Each group maps to one SQL file and one dashboa
 | 11 | Do recommended offers actually match customer needs and observed behaviour? |
 | 12 | Which trends are emerging over time across segments and channels? |
 
-## 3. Question-to-Model Mapping
+## 3. Question-to-Model Mapping             
 
-Which dimension each question needs. This drove the star schema design — the model was built from the questions, not the other way round.
+Which dimension each question needs. This drove the star schema design — the model was built from the questions, not the other way round.    
 
 | No. | Question | Customer | Date | Branch | Channel | Txn Type | Product |
 |:---:|---|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -117,8 +112,7 @@ Which dimension each question needs. This drove the star schema design — the m
 | 11 | Offer vs behaviour fit | ✓ | | | | | ✓ |
 | 12 | Emerging trends | ✓ | ✓ | | ✓ | | |
 
-## 4. Architecture
-
+## 4. Architecture             
 ```mermaid
 flowchart LR
     A["Source file<br/>20,000 rows"] --> B["Python<br/>profiling"]
@@ -151,12 +145,9 @@ erDiagram
     dim_marketing        ||--o{ fact_transactions : ""
 ```
 
-## 5. Key Findings
-
-## 6. Recommendations
-
-## 7. Limitations
-
+## 5. Key Findings        
+## 6. Recommendations          
+## 7. Limitations            
 - Synthetic / simulated dataset — figures illustrate methodology, not any real institution's performance.
 - `RecommendedOffer` is deterministically derived from income segment, which caps what Q11 can conclude.
 - No time-series depth per customer beyond the observed window, so churn and lifetime-value questions are out of scope.
@@ -165,6 +156,5 @@ erDiagram
 ---
 
 ## Author
-
-**Bùi Thu Hằng** — Data Analyst
+**Bùi Thu Hằng** — Data Analyst           
 Reach me on [LinkedIn](https://www.linkedin.com/in/buithuhang/) or via [Email](mailto:hangbui.bda@gmail.com)
