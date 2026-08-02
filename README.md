@@ -1,6 +1,6 @@
 # Banking Transaction Analytics
 
-Analytics pipeline over 20,000 Spanish retail-banking transactions: Python profiling → PostgreSQL (raw → staging → star schema, marts) → SQL analysis → Power BI. Answers 12 business questions on customer segmentation, transaction behavior, fee revenue and seasonality.
+Analytics pipeline over 20,000 Spanish retail-banking transactions: Python profiling → PostgreSQL (raw → staging → star schema, marts) → SQL analysis → Power BI. Answers 12 business questions on customer segmentation, transaction behaviour, fee revenue and seasonality.
 
 <p align="left">
   <img src="https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white" />
@@ -9,8 +9,8 @@ Analytics pipeline over 20,000 Spanish retail-banking transactions: Python profi
   <img src="https://img.shields.io/badge/Power_BI-Desktop-F2C811?logo=powerbi&logoColor=black" />
 </p>
 
-
 ## Dashboard
+
 <!--
 <table>
   <tr>
@@ -39,8 +39,6 @@ Analytics pipeline over 20,000 Spanish retail-banking transactions: Python profi
 </table>
 -->
 
-
-
 ## 1. Business Context
 
 A retail bank holds transaction-level data across checking accounts, loans, mortgages and card payments, enriched with customer income band, credit score, branch location, channel and the marketing offer assigned to each customer.
@@ -55,6 +53,7 @@ The bank wants to use this data to:
 ### Dataset
 
 | Attribute | Value |
+|---|---|
 | Records | 20,000 transactions |
 | Market | Spain |
 | Product lines | Checking accounts, loans, mortgages, card payments |
@@ -63,42 +62,48 @@ The bank wants to use this data to:
 | Operational attributes | Branch city + coordinates, channel (ATM / Mobile / Branch) |
 | Time span | ~871 distinct dates |
 
-
-
 ## 2. Business Questions
 
 Twelve questions in four groups. Each group maps to one SQL file and one dashboard section.
 
-### Group 1 — Customer Segmentation
+### Group 1. Customer Segmentation
+
 | No. | Question |
+|:---:|---|
 | 1 | Which customer segments are the most transaction-active? |
 | 2 | Which financial products are preferred within each segment? |
 | 3 | Does credit score correlate with transaction frequency or total accumulated fees? |
 
-### Group 2 — Transaction Behavior 
+### Group 2. Transaction Behaviour
+
 | No. | Question |
+|:---:|---|
 | 4 | Which transaction types dominate by volume (count) and by value (amount)? |
 | 5 | Which cities or branches are transaction hotspots, and which underperform? |
 | 6 | How do usage habits differ across Mobile, ATM and Branch channels? |
 
-### Group 3 — Revenue & Cost 
+### Group 3. Revenue & Cost
+
 | No. | Question |
+|:---:|---|
 | 7 | Which transaction types generate the most fee revenue (card fees, insurance, late payment)? |
 | 8 | Are any customer groups bearing a disproportionate share of fees? |
 | 9 | Which friction points recur most often while still generating revenue? |
 
-### Group 4 — Trends & Performance
+### Group 4. Trends & Performance
+
 | No. | Question |
+|:---:|---|
 | 10 | Are there monthly or seasonal peaks and troughs in transaction activity? |
 | 11 | Do recommended offers actually match customer needs and observed behaviour? |
 | 12 | Which trends are emerging over time across segments and channels? |
-
 
 ## 3. Question-to-Model Mapping
 
 Which dimension each question needs. This drove the star schema design — the model was built from the questions, not the other way round.
 
-| # | Question | Customer | Date | Branch | Channel | Txn Type | Product |
+| No. | Question | Customer | Date | Branch | Channel | Txn Type | Product |
+|:---:|---|:---:|:---:|:---:|:---:|:---:|:---:|
 | 1 | Most active segments | ✓ | | | | ✓ | |
 | 2 | Product preference by segment | ✓ | | | | | ✓ |
 | 3 | Credit score vs fees | ✓ | | | | | |
@@ -111,7 +116,6 @@ Which dimension each question needs. This drove the star schema design — the m
 | 10 | Seasonality | | ✓ | | | | |
 | 11 | Offer vs behaviour fit | ✓ | | | | | ✓ |
 | 12 | Emerging trends | ✓ | ✓ | | ✓ | | |
-
 
 ## 4. Architecture
 
@@ -138,27 +142,21 @@ flowchart LR
 
 ```mermaid
 erDiagram
-    dim_date            ||--o{ fact_transactions : ""
-    dim_customer        ||--o{ fact_transactions : ""
-    dim_product         ||--o{ fact_transactions : ""
-    dim_branch          ||--o{ fact_transactions : ""
-    dim_channel         ||--o{ fact_transactions : ""
-    dim_transaction_type||--o{ fact_transactions : ""
-    dim_marketing       ||--o{ fact_transactions : ""
+    dim_date             ||--o{ fact_transactions : ""
+    dim_customer         ||--o{ fact_transactions : ""
+    dim_product          ||--o{ fact_transactions : ""
+    dim_branch           ||--o{ fact_transactions : ""
+    dim_channel          ||--o{ fact_transactions : ""
+    dim_transaction_type ||--o{ fact_transactions : ""
+    dim_marketing        ||--o{ fact_transactions : ""
 ```
-
-**Grain:** one row per transaction.         
-**Measures:** `amount`, `credit_card_fees`, `insurance_fees`, `late_payment_amount`, `total_fees`.
 
 ## 5. Key Findings
 
-
-
 ## 6. Recommendations
 
-
-
 ## 7. Limitations
+
 - Synthetic / simulated dataset — figures illustrate methodology, not any real institution's performance.
 - `RecommendedOffer` is deterministically derived from income segment, which caps what Q11 can conclude.
 - No time-series depth per customer beyond the observed window, so churn and lifetime-value questions are out of scope.
@@ -167,5 +165,6 @@ erDiagram
 ---
 
 ## Author
-Bùi Thu Hằng — Data Analyst
-You Can Reach Me At [LinkedIn](https://www.linkedin.com/in/buithuhang/) · [Email](mailto:hangbui.bda@gmail.com)
+
+**Bùi Thu Hằng** — Data Analyst
+Reach me on [LinkedIn](https://www.linkedin.com/in/buithuhang/) or via [Email](mailto:hangbui.bda@gmail.com)
