@@ -6,13 +6,10 @@ CREATE TABLE marts.dim_channel AS
 SELECT
     ROW_NUMBER() OVER(
         ORDER BY
-        ch.channel,
-        ch.currency) 
+        ch.channel) 
     AS channel_key,
-    ch.channel,
-    ch.currency
+    ch.channel
 FROM (
     SELECT DISTINCT
-    channel,
-    currency
+    channel
 FROM staging.stg_transactions) ch;
