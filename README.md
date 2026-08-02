@@ -157,9 +157,9 @@ erDiagram
 
 ---
 ## 💬 Let's talk
-Thank you for reading this far!   
+Thank you for reading this far!     
 I'm always open to Data Analyst opportunities, as well as any feedback that 
-helps me improve. Feel free to reach out. 
+helps me improve. Feel free to reach out — I'd love to connect.
 
 **Bùi Thu Hằng** — Data Analyst           
-📧 [Email](mailto:hangbui.bda@gmail.com) · 💼 [LinkedIn](https://www.linkedin.com/in/buithuhang/)
+Reach me on [LinkedIn](https://www.linkedin.com/in/buithuhang/) or via [email](mailto:hangbui.bda@gmail.com)
