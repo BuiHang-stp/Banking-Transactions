@@ -1,5 +1,7 @@
 # Banking Transaction Analytics             
-Analytics pipeline over 20,000 Spanish retail-banking transactions: Python profiling → PostgreSQL (raw → staging → star schema, marts) → SQL analysis → Power BI. Answers 12 business questions on customer segmentation, transaction behaviour, fee revenue and seasonality.
+Analytics pipeline over 20,000 Spanish retail-banking transactions:                
+Python profiling → PostgreSQL (raw → staging → star schema, marts) → SQL analysis → Power BI.              
+Answers 12 business questions on customer segmentation, transaction behavior, fee revenue and seasonality.   
 
 <p align="left">
   <img src="https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white" />
@@ -69,7 +71,7 @@ Twelve questions in four groups. Each group maps to one SQL file and one dashboa
 | 2 | Which financial products are preferred within each segment? |
 | 3 | Does credit score correlate with transaction frequency or total accumulated fees? |
 
-### Group 2. Transaction Behaviour
+### Group 2. Transaction Behavior
 
 | No. | Question |
 |:---:|---|
@@ -95,7 +97,7 @@ Twelve questions in four groups. Each group maps to one SQL file and one dashboa
 
 ## 3. Question-to-Model Mapping             
 
-Which dimension each question needs. This drove the star schema design — the model was built from the questions, not the other way round.    
+Which dimension each question needs. This drove the star schema design — the model was built from the questions.    
 
 | No. | Question | Customer | Date | Branch | Channel | Txn Type | Product |
 |:---:|---|:---:|:---:|:---:|:---:|:---:|:---:|
