@@ -11,7 +11,7 @@ SELECT
     st.amount,
     st.credit_card_fees,
     st.insurance_fees,
-    st.late_payment_amount 
+    st.late_payment_amount, 
     st.currency   
 FROM staging.stg_transactions st
 LEFT JOIN marts.dim_date dd
