@@ -9,6 +9,7 @@ SELECT
     customer_id,
     customer_score,
     monthly_income,
+    customer_segment,
     recommended_offer
 FROM(
     SELECT 
@@ -16,6 +17,7 @@ FROM(
     customer_score,
     monthly_income,
     recommended_offer,
+    customer_segment,
     transaction_date,
     ROW_NUMBER() OVER(
         PARTITION BY customer_id
