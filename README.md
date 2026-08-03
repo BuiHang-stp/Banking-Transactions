@@ -134,18 +134,8 @@ flowchart LR
 | `staging` | Cleaning | Type casting, date parsing, text standardisation, derived columns (`direction`, `total_fees`, `amount_base`). |
 | `marts` | Serving | Star schema. The only layer Power BI and the analysis queries read from. |
 
-### Star Schema
-
-```mermaid
-erDiagram
-    dim_date             ||--o{ fact_transactions : ""
-    dim_customer         ||--o{ fact_transactions : ""
-    dim_product          ||--o{ fact_transactions : ""
-    dim_branch           ||--o{ fact_transactions : ""
-    dim_channel          ||--o{ fact_transactions : ""
-    dim_transaction_type ||--o{ fact_transactions : ""
-    dim_marketing        ||--o{ fact_transactions : ""
-```
+### Star Schema Transactions ERD
+<img width="1536" height="1024" alt="Star Schema Transactions ERD" src="https://github.com/user-attachments/assets/ca7eb6f9-2331-458b-a415-5d199cbaad2e" />
 
 ## 5. Key Findings        
 ## 6. Recommendations          
