@@ -20,7 +20,7 @@ SELECT
     COALESCE(credit_card_fees::NUMERIC(18,2),0) AS credit_card_fees, 
     COALESCE(insurance_fees::NUMERIC(18,2),0) AS insurance_fees,
     COALESCE(late_payment_amount::NUMERIC(18,2),0) AS late_payment_amount, 
-        (COALESCE(credit_card_fees::NUMERIC(18,2),0) 
+        COALESCE(credit_card_fees::NUMERIC(18,2),0) 
        + COALESCE(insurance_fees::NUMERIC(18,2),0)
        + COALESCE(late_payment_amount::NUMERIC(18,2),0) AS total_fee,
     customer_score::INTEGER AS customer_score, 
