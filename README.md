@@ -13,51 +13,47 @@ Answers 12 business questions on customer segmentation, transaction behavior, fe
 ## Dashboard Preview
 
 <table>
-  <tr>
-    <td colspan="2" align="center">
-      <a href="dashboard/screenshots/01_overview.png">
-        <img src="dashboard/screenshots/01_overview.png" width="100%">
-      </a>
-      <br>
-      <b>Page 1 — Overview</b>
-    </td>
-  </tr>
-
-  <tr>
-    <td width="50%" align="center">
-      <a href="dashboard/screenshots/02_customer_segmentation.png">
-        <img src="dashboard/screenshots/02_customer_segmentation.png" width="100%">
-      </a>
-      <br>
-      <b>Page 2 — Customer Segmentation</b>
-    </td>
-
-    <td width="50%" align="center">
-      <a href="dashboard/screenshots/03_transaction_behaviour.png">
-        <img src="dashboard/screenshots/03_transaction_behaviour.png" width="100%">
-      </a>
-      <br>
-      <b>Page 3 — Transaction Behaviour</b>
-    </td>
-  </tr>
-
-  <tr>
-    <td width="50%" align="center">
-      <a href="dashboard/screenshots/04_fee_revenue.png">
-        <img src="dashboard/screenshots/04_fee_revenue.png" width="100%">
-      </a>
-      <br>
-      <b>Page 4 — Fee Revenue</b>
-    </td>
-
-    <td width="50%" align="center">
-      <a href="dashboard/screenshots/05_trends_over_time.png">
-        <img src="dashboard/screenshots/05_trends_over_time.png" width="100%">
-      </a>
-      <br>
-      <b>Page 5 — Trends Over Time</b>
-    </td>
-  </tr>
+<tr>
+<td colspan="2" align="center">
+<a href="dashboard/screenshots/01_overview.png">
+<img src="dashboard/screenshots/01_overview.png" width="100%">
+</a>
+<br>
+<b>Page 1 — Overview</b>
+</td>
+</tr>
+<tr>
+<td width="50%" align="center">
+<a href="dashboard/screenshots/02_customer_segmentation.png">
+<img src="dashboard/screenshots/02_customer_segmentation.png" width="100%">
+</a>
+<br>
+<b>Page 2 — Customer Segmentation</b>
+</td>
+<td width="50%" align="center">
+<a href="dashboard/screenshots/03_transaction_behaviour.png">
+<img src="dashboard/screenshots/03_transaction_behaviour.png" width="100%">
+</a>
+<br>
+<b>Page 3 — Transaction Behaviour</b>
+</td>
+</tr>
+<tr>
+<td width="50%" align="center">
+<a href="dashboard/screenshots/04_fee_revenue.png">
+<img src="dashboard/screenshots/04_fee_revenue.png" width="100%">
+</a>
+<br>
+<b>Page 4 — Fee Revenue</b>
+</td>
+<td width="50%" align="center">
+<a href="dashboard/screenshots/05_trends_over_time.png">
+<img src="dashboard/screenshots/05_trends_over_time.png" width="100%">
+</a>
+<br>
+<b>Page 5 — Trends Over Time</b>
+</td>
+</tr>
 </table>
 
 <p><em>Click any image to view it full size.</em></p>
