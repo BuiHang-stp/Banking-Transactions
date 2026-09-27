@@ -6,7 +6,6 @@ Answers 12 business questions on customer segmentation, transaction behavior, fe
 <p align="left">
   <img src="https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/PostgreSQL-16-4169E1?logo=postgresql&logoColor=white" />
-  <img src="https://img.shields.io/badge/Docker-compose-2496ED?logo=docker&logoColor=white" />
   <img src="https://img.shields.io/badge/Power_BI-Desktop-F2C811?logo=powerbi&logoColor=black" />
 </p>
    
@@ -102,9 +101,9 @@ Twelve questions in four groups. Each group maps to one SQL file and one dashboa
 
 | No. | Question |
 |:---:|---|
-| 7 | Which transaction types generate the most fee revenue (card fees, insurance, late payment)? |
-| 8 | Are any customer groups bearing a disproportionate share of fees? |
-| 9 | Which friction points recur most often while still generating revenue? |
+| 7 | Which transaction types generate the most fee-related amounts across card fees, insurance fees and late-payment amounts? |
+| 8 | Are any customer groups bearing a disproportionate share of fee-related amounts? |
+| 9 | Which fee-related events occur most frequently, affect the most customers, and contribute the most monetary value? |
 
 ### Group 4. Trends & Performance         
 
@@ -153,18 +152,20 @@ flowchart LR
 | `staging` | Cleaning | Type casting, date parsing, text standardisation, derived columns (`direction`, `total_fees`, `amount_base`). |
 | `marts` | Serving | Star schema. The only layer Power BI and the analysis queries read from. |
 
-### Star Schema Transactions ERD
-<img width="1536" height="1024" alt="Star Schema Transactions ERD" src="https://github.com/user-attachments/assets/ca7eb6f9-2331-458b-a415-5d199cbaad2e" />
+### Schema Transactions ERD
+![Schema Transactions ERD](<Star Schema Transactions ERD.png>)
+
+
 
 ## 5. Key Findings   
 - Transaction activity is broadly stable over time. Monthly activity stays in a relatively narrow range, and the daily transaction trend is mostly flat, with no strong seasonal pattern. The sharp decline in May 2025 should not be interpreted as a true drop because May is only partially observed.
 - Middle-income customers are the largest segment and account for roughly 45% of both customers and transaction activity. This suggests that transaction volume is broadly proportional to segment size rather than being dominated by an unusually active segment.
 - Transaction behaviour is fairly balanced across channels and transaction types. Channel shares are close to one another, and transaction-type volumes are also similar, indicating no single channel or transaction type dominates overall usage.
-- Fee revenue is much more concentrated than transaction activity. Loan Payment generates about €379K in fee revenue, far above the other transaction types, while Late Payment contributes about €0.33M and represents the largest fee source.
-- Fee burden is slightly higher for low-income customers. Low-income customers represent about 21.9% of customers but around 22.6% of fees, giving them the highest fee-burden index among the segments. The difference is not extreme, but it is directionally important.
+- Fee-related amounts are much more concentrated than transaction activity. Loan Payment contributes about €379K in fee-related value, far above the other transaction types, while Late Payment Amount contributes about €0.33M and represents the largest fee-related component.
+- Fee-related burden is slightly higher for low-income customers. Low-income customers represent about 21.9% of customers but around 22.6% of fee-related amounts, giving them the highest relative fee-burden index among the segments. The difference is not extreme, but it is directionally important.
 - Customer-segment and channel shares remain quite stable over time. Segment momentum and channel mix do not show major structural shifts, suggesting that recent changes in transaction value are more likely driven by transaction intensity/value than by a large migration between segments or channels.     
 ## 6. Recommendations      
-- Investigate the drivers behind Loan Payment and Late Payment fees. Because fee revenue is highly concentrated in these areas, the bank should determine whether the revenue reflects intentional pricing or customer friction that could affect satisfaction and retention.
+- Investigate the drivers behind Loan Payment fees and Late Payment Amounts. Because fee-related value is highly concentrated in these areas, the bank should determine whether the pattern reflects intentional pricing, repayment behaviour, or potential customer friction that could affect satisfaction and retention.
 - Monitor fee burden for low-income customers. The current imbalance is small, but this segment has the highest relative fee burden. Tracking the metric over time can help detect whether the gap widens.
 - Prioritize the middle-income segment for broad engagement initiatives. It is the largest customer segment and contributes the greatest transaction volume, making it the most scalable audience for cross-sell and retention campaigns.
 - Avoid over-investing in channel migration based on the current data. Channel shares are relatively stable, so decisions should focus more on improving channel experience and economics rather than assuming a strong shift toward one channel.

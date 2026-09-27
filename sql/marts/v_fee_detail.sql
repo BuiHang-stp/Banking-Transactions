@@ -1,3 +1,9 @@
+-- Note:
+-- late_payment_amount is included in this analytical view for comparison
+-- with fee-related amounts, but the source does not confirm that it is
+-- strictly a fee or penalty. It is therefore labelled as
+-- 'Late Payment Amount' rather than 'Late Payment Fee'.
+
 DROP VIEW IF EXISTS marts.v_fee_detail;
 CREATE VIEW marts.v_fee_detail AS
 SELECT
@@ -37,7 +43,7 @@ SELECT
     channel_key,
     transaction_type_key,
     currency,
-    'Late Payment Fee' AS fee_type,
+    'Late Payment Amount' AS fee_type,
     late_payment_amount AS fee_amount
 FROM marts.fact_transactions
 WHERE late_payment_amount > 0;
